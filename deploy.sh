@@ -1,6 +1,5 @@
 #! /bin/bash
 
-
 # 复制.key 文件到
 # 添加 key config
 # 使用管理员权限运行
