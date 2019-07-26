@@ -17,10 +17,11 @@ if [ -f $5 ]; then
     fi
 
     yes | cp $5 $sshDir/$5;
-    sudo chmod 644 $sshDir/$5
-    echo "HostName $1" >> $sshDir/config
+    sudo chmod 600 $sshDir/$5
+    echo "Host $1" >> $sshDir/config
     echo "    User $2" >> $sshDir/config
-    echo "    Host $3" >> $sshDir/config
     echo "    Port $4" >> $sshDir/config
+    echo "    HostName $3" >> $sshDir/config
     echo "    IdentityFile $5" >> $sshDir/config
+    echo "    StrictHostKeyChecking no" >> $sshDir/config
 fi
